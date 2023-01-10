@@ -1,6 +1,7 @@
 ﻿
 printNoseCone();
 printBody();
+printNoseCone();
 
 
 void printNoseCone() {
