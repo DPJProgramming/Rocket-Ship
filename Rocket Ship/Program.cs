@@ -31,23 +31,22 @@ void printNoseCone() {
 static void printBody() {
 	printEdge();
 	printDiamondTop();
-	printDiamondBottom();
+	//printDiamondBottom();
 	printEdge();
-	printDiamondBottom();
+	//printDiamondBottom();
 	printDiamondTop();
-
 	printEdge();
 }
 
 static void printDiamondTop() {
 
-	for (int line = 1; (line <= 10); line++) {
+	for (int line = 1; (line <= 5); line++) {
 
 		//print "|" for every line
 		Console.Write("|");
 
 		//prints left "."
-		for (int i = 1; i <= (10 - line); i++) {
+		for (int i = 1; i <= (5 - line); i++) {
 			Console.Write(".");
 		}
 
@@ -57,7 +56,7 @@ static void printDiamondTop() {
 		}
 
 		//prints middle "."
-		for (int i = 1; i <= -2 * line + 2 * 10; i++) {
+		for (int i = 1; i <= -2 * line + 10; i++) {
 			Console.Write(".");
 		}
 
@@ -67,51 +66,12 @@ static void printDiamondTop() {
 		}
 
 		//prints right "."
-		for (int i = 1; i <= (10 - line); i++) {
+		for (int i = 1; i <= (5 - line); i++) {
 			Console.Write(".");
 		}
 
 		//print "|" for every line on right side
 		Console.WriteLine("|");
-	}
-}
-
-//this will print the middle of the body
-static void printDiamondBottom() {
-
-	for (int line = 1; (line <= 10); line++) {
-
-		//print "|" for every line
-		Console.Write("|");
-
-		//prints left dots
-		for (int i = 1; i <= (line - 1); i++) {
-			Console.Write(".");
-		}
-
-		//prints "\/"
-		for (int i = 1; i >= (line - 10 + 1); i--) {
-			Console.Write("\\/");
-		}
-
-		//prints middle dots
-		for (int i = 1; i <= (2 * line - 2); i++) {
-			Console.Write(".");
-		}
-
-		//prints "\/"
-		for (int i = 1; i >= (line - 10 + 1); i--) {
-			Console.Write("\\/");
-		}
-
-		//prints right "."
-		for (int i = 1; i <= (line - 1); i++) {
-			Console.Write(".");
-		}
-
-		//print "|" for every line on right
-		Console.WriteLine("|");
-
 	}
 }
 
@@ -121,13 +81,14 @@ static void printEdge() {
 	Console.Write("+");
 
 	//this prints *=
-	for (int line = 1; line <= (2 * 10); line++) {
+	for (int line = 1; line <= (10); line++) {
 		Console.Write("=*");
 	}
 
 
 	Console.WriteLine("+");
-}                
+}
+
 
 
 
